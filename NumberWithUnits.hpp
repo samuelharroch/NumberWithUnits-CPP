@@ -6,12 +6,15 @@ namespace ariel{
     class NumberWithUnits
     {
     private:
-        
+
+        double num;
+        std::string units;
+        static double convert(double num, const std::string &unit1, const std::string &unit2 ) ;
+        int compareTo(const NumberWithUnits& other) const ;
+
     public:
 
-        NumberWithUnits(const double num, const std::string& units);
-
-        NumberWithUnits();   
+        NumberWithUnits(const double num, const std::string& units);   
 
         static void read_units(std::istream& units_file);
 
